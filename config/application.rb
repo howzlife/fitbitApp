@@ -9,7 +9,6 @@ Bundler.require(*Rails.groups)
 module RubyOnRailsWebapp
   class Application < Rails::Application
 
-
     # Set this if you want to get the error_description
     # OmniAuth.config.on_failure = Proc.new { |env|
     #   message_key = env['omniauth.error.type']

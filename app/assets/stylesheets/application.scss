@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation
+ *= require foundation_and_overrides
  */
 
  body {
@@ -19,6 +21,7 @@
   text-align: center;
   font-size: 300%;
   font-weight: 100;
+  background-image: url("/assets/splash.jpeg");
 }
 input[type=checkbox],
 input[type=radio] {

@@ -1,15 +1,17 @@
-body {
+div.home {
+  height: 100%;
   background: url("/assets/splash2.jpeg") !important;
-  background-size: 50% 100%; 
 }
 
 p.tagline {
+  font-size: 3em;
   color: #FFF !important;
 }
 
 .login-box {
 	border-radius: 20px;
-	background-color: rgba(43, 192, 190, 0.2);
+  height: 100%;
+	background-color: rgba(178, 65, 00, 0.2);
 	opacity: 0.9;
 }
 
