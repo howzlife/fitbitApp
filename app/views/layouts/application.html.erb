@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= yield :cdn_code %>
+    <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+    <%= javascript_include_tag '//use.typekit.net/iws6ohy.js' %>
 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
     <%= stylesheet_link_tag    "application" %>
@@ -13,8 +18,6 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-
     <%= yield %>
 
   </body>
