@@ -1,8 +1,15 @@
+<% content_for :cdn_code do %>
+  <%= stylesheet_link_tag 'header' %>
+<% end %>
 <div class="fixed">
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">My Site</a></h1>
+        <div class="logo-wrapper hide-for-small-only">
+          <div class="logo">
+            <img class="topbar-logo" src="/assets/testLogo.png">
+          </div>
+        </div>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -11,13 +18,23 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="active"><a href="#">Right Button Active</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="https://howzlife.auth0.com/v2/logout?returnTo=https://secure-reaches-46037.herokuapp.com">Logout</a></li>
       </ul>
 
       <!-- Left Nav Section -->
       <ul class="left">
-        <li><a href="#">Left Nav Button</a></li>
+        <li class="divider"></li>
+        <li class="has-form">
+          <div class="row">
+            <div class="large-8 small-9 columns search_field">
+              <input type="text" placeholder="Search for Friends">
+            </div>
+            <div class="large-4 small-3 columns search_button_div">
+              <a href="#" class="alert button expand search_button">Search</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </section>
   </nav>

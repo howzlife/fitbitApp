@@ -1,0 +1,28 @@
+.topbar-logo {
+	max-height: 45px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.search_field {
+	padding-right: 5px !important;
+}
+
+.search_button_div {
+	padding-left: 5px !important;
+}
+
+.search_button {
+		background-color: #B24100 !important;
+		width: 10em !important;
+}
+
+.left {
+	width: 400px !important;
+}
+
+.has_form {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+

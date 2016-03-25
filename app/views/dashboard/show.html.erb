@@ -6,14 +6,32 @@
 <div class="feed">
     </br></br>
     <div class="container">
-        <div class="login-page clearfix">
-          <div class="logged-in-box auth0-box logged-in">
-            <h1 id="logo"><img src="//cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png" /></h1>
-            <img class="avatar" src="<%= @user[:info][:image] %>"/>
-            <h2>Welcome <%= @user[:info][:name] %></h2>
-            <pre><%= JSON.pretty_generate(@user[:info]) %></pre>
-            <pre><%= JSON.pretty_generate(@user) %></pre>
-          </div>
+      <div class="banner">
+        <div class="row small-up-2 large-up-4">
+          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
+          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
+          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
+          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
         </div>
+      </div>
+    </div>
+      <div class="feed-banner">
+        <div class="fitfam-container">
+          <div class="medium-4 columns"><p><%= image_tag "http://placehold.it/400x420&Text=Fitfam" %></p></div>
+        </div>
+        <div class="feed-container">
+          <div class="medium-8 columns"><p><%= image_tag "http://placehold.it/900x450&Text=Feed" %></p></div>
+        </div>
+      </div>
+
+
+    <div class="login-page clearfix">
+      <div class="logged-in-box auth0-box logged-in">
+        <h1 id="logo"><img src="//cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png" /></h1>
+        <img class="avatar" src="<%= @user[:info][:image] %>"/>
+        <h2>Welcome <%= @user[:info][:name] %></h2>
+        <pre><%= JSON.pretty_generate(@user[:info]) %></pre>
+        <pre><%= JSON.pretty_generate(@user) %></pre>
+      </div>
     </div>
 </div>

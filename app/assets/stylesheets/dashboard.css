@@ -1,3 +1,37 @@
+.container {
+	width: 100%;
+	padding: 15px 15px 15px 15px;
+	background-image: url("banner.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 15px;
+}
+
 .feed {
 	background: #2F3F43 !important;
+	padding: 20px 20px 20px 20px;
 }
+
+.banner {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: 100%;
+}
+
+.row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+	max-width: 25%;
+}
+
+.feed-banner {
+	min-height: 650px;
+	padding-top: 15px;
+	padding-top: 15px;
+}
+
+
