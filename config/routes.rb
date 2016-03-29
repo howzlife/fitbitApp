@@ -2,12 +2,18 @@ Rails.application.routes.draw do
 
   get 'dashboard/show'
 
+  get 'profile' => 'profile#index'
+
   get "/" => "home#show"
 
   get "/dashboard" => "dashboard#show"
 
   get "/auth/auth0/callback" => "auth0#callback"
   get "/auth/failure" => "auth0#failure"
+
+  Rails.application.routes.draw do
+    root to: 'home#show'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

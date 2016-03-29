@@ -37,6 +37,8 @@ gem 'dotenv', '~> 0.11.1', group: :development
 
 gem 'foundation-rails', '5.4.3.1'
 
+gem 'acts_as_follower'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

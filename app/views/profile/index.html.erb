@@ -1,0 +1,23 @@
+<% content_for :cdn_code do %>
+  <%= javascript_include_tag '//cdn.auth0.com/js/lock-7.11.min.js' %>
+  <%= stylesheet_link_tag  'dashboard' %>
+<% end %>
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="feed-banner">
+    <div class="fitfam-container">
+      <div class="large-4 columns">
+        <p><%= image_tag "cabo_profile.jpg" %></p>
+          <h3>Nick Dubus</h3>
+          <h4>29 years old</h4>
+          <h4>6'1     195lbs</h4>
+          <button>Add Nick to my FitFam!</button>
+      </div>
+    </div>
+    <div class="feed-container">
+      <div class="medium-8 columns">
+        <p><%= image_tag "http://placehold.it/900x1000&Text=Feed" %></p>
+      </div>
+    </div>
+  </div>
+</div>
