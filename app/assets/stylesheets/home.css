@@ -15,6 +15,10 @@ p.tagline {
 	opacity: 0.9;
 }
 
+.column {
+  width: 500px !important;
+}
+
 .btn-wrapper {
     margin: auto;
     width: 60%;

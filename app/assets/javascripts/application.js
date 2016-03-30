@@ -12,5 +12,8 @@
 //
 //= require_tree .
 //= require foundation
+//= require fusioncharts/fusioncharts
+//= require fusioncharts/fusioncharts.charts
+//= require fusioncharts/themes/fusioncharts.theme.fint
 
 $(function(){ $(document).foundation(); });

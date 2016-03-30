@@ -1,5 +1,6 @@
 <% content_for :cdn_code do %>
   <%= javascript_include_tag '//cdn.auth0.com/js/lock-7.11.min.js' %>
+  <%= javascript_include_tag "fusioncharts" %>
   <%= stylesheet_link_tag  'profile' %>
 <% end %>
 <%= render "layouts/header" %>
@@ -8,10 +9,9 @@
     <div class="container container-logged-in">
       <div class="banner">
         <div class="row small-up-2 large-up-4">
-          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
-          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
-          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
-          <div class="column"><%= image_tag "http://placehold.it/200x300" %></div>
+            <div class="column" id="chartContainer1"><%= @chartWater.render() %></div>
+            <div class="column" id="chartContainer2"><%= @chartCalories.render() %></div>
+            <div class="column"><%=  image_tag "http://placehold.it/200x300&Text=Graph"  %></div>
         </div>
       </div>
     </div>
