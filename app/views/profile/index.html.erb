@@ -3,21 +3,53 @@
   <%= stylesheet_link_tag  'dashboard' %>
 <% end %>
 <%= render "layouts/header" %>
-<div class="container">
-  <div class="feed-banner">
-    <div class="fitfam-container">
-      <div class="large-4 columns">
-        <p><%= image_tag "cabo_profile.jpg" %></p>
-          <h3>Nick Dubus</h3>
-          <h4>29 years old</h4>
-          <h4>6'1     195lbs</h4>
-          <button>Add Nick to my FitFam!</button>
-      </div>
-    </div>
-    <div class="feed-container">
-      <div class="medium-8 columns">
-        <p><%= image_tag "http://placehold.it/900x1000&Text=Feed" %></p>
+<div class="feed">
+  </br></br>
+  <div class="container container-logged-in">
+    <div class="banner">
+      <div class="row small-up-2 large-up-4">
+          <div class="column" id="chartContainer1"></div>
       </div>
     </div>
   </div>
+  <div class="feed-banner">
+    <div class="fitfam-container">
+      <div class="medium-4 columns user-info-container">
+        <div class="avatar-large">
+        <p><%= image_tag "https://s3.amazonaws.com/uifaces/faces/twitter/sdw/128.jpg" %></p>
+        </div>
+        <div class="user-info">
+          <h3 style="color: #FFF;">Nick Dubus</h3>
+          <h4 style="color: #FFF;">29 years old</h4>
+          <h4 style="color: #FFF;">6'1     195lbs</h4>
+        </div>
+          <button>Add Nick to my FitFam!</button>
+      </div>
+    </div>
+        <div class="feed-container">
+          <div class="medium-8 columns">
+            <div class="fitfeed-title">
+            <h3 style="color:#FFF;">Nick's Activities</h3>
+          </div>
+            <div class="fitfeed-activities">
+              <div class="fitfeed-friend">
+                <%= image_tag 'beach-volleyball.png', class: "avatar-small"%>
+              </div>
+              <div class="fitfeed-friend">
+                <%= image_tag 'soccer2.png', class: "avatar-small"%>
+              </div>
+              <div class="fitfeed-friend">
+                <%= image_tag 'rock-climbing.png', class: "avatar-small"%>
+              </div>
+              <div class="fitfeed-friend">
+                  <%= image_tag 'running.png', class: "avatar-small"%>
+              </div>
+              <div class="fitfeed-friend">
+                  <%= image_tag 'tennis.png', class: "avatar-small"%>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 </div>
+

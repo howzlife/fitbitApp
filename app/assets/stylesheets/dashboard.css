@@ -1,15 +1,22 @@
 .container-logged-in {
 	width: 100%;
+	height: 300px;
 	padding: 15px 0px 15px 0px;
 	background-image: url("banner.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	border-radius: 15px;
+	border-style: solid;
 }
 
 .feed {
 	background: #2F3F43 !important;
 	padding: 0px 0px 20px 0px;
+}
+
+.chart {
+  background: #fff;
+  margin: 5px;
 }
 
 .banner {
@@ -31,5 +38,83 @@
 	padding-top: 15px;
 	padding-top: 15px;
 }
+
+.fitfam {
+	margin-left: 25px;
+	background: #FFF;
+	border-style: solid;
+	border-width: 5px;
+	width: 350px;
+	height: 415px;
+	padding: 10px;
+}
+.fitfam-friend {
+	background: #FFF;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	width: 100%;
+	height: 18%;
+	padding: 10px;
+	margin: 2px;
+}
+
+.avatar-small {
+	float: left !important;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	max-width: 52px !important;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.fitfeed {
+	margin-left: 25px;
+	background: #FFF;
+	border-style: solid;
+	border-width: 5px;
+	width: 800px;
+	height: 411px;
+	padding: 10px;
+}
+
+.fitfeed-friend {
+	background: #FFF;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	width: 100%;
+	height: 17%;
+	padding: 10px;
+	margin: 2px;
+}
+
+.fitfam-info {
+	float: right;
+	width: 235px;
+	height: 100%;
+}
+
+div#cal-heatmap {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(50%);
+}
+
+div.fitfam-item {
+	width: 150px;
+	max-height: 40%;
+	margin-top: 0px;
+	float: left !important;
+}
+
+div.fitfam-item h5 {
+	padding-left: 7px;
+	float: left;
+}
+
+
 
 

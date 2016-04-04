@@ -7,13 +7,14 @@
     <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
     <%= javascript_include_tag '//use.typekit.net/iws6ohy.js' %>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application" %>
+    
     <%= csrf_meta_tags %>
   </head>
 

@@ -7,9 +7,29 @@
 	border-radius: 15px;
 }
 
+.user-info-container {
+	padding-top: 50px;
+}
+
+.avatar-large img{
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 5px; 
+	border-color: black;
+}
+
 .feed {
 	background: #2F3F43 !important;
 	padding: 0px 0px 20px 0px;
+}
+
+.fitfeed-title {
+	height: 10%;
+}
+
+
+.fitfeed-activities {
+	height: 90%;
 }
 
 .banner {

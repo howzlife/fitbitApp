@@ -10,10 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require d3
 //= require foundation
-//= require fusioncharts/fusioncharts
-//= require fusioncharts/fusioncharts.charts
-//= require fusioncharts/themes/fusioncharts.theme.fint
+//= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+ $(document).foundation(); 
+});
