@@ -22,7 +22,7 @@
                 "legend" : [1000, 1500, 2000, 2500],
                 "itemName": ["calorie", "calories"],
                 "dataType": "json",
-                "data": "/dashboard/data", 
+                "data": "/dashboard/data/fitbit|4DNVLF", 
                   legendColors: {
                     min: "white",
                     max: "slateblue",
@@ -45,7 +45,7 @@
                 "legend" : [1000, 1500, 2000, 2500],
                 "itemName": ["calorie", "calories"],
                 "dataType": "json",
-                "data": "/dashboard/data", 
+                "data": "/dashboard/data/fitbit|4DNVLF", 
                   legendColors: {
                     min: "white",
                     max: "steelblue",
@@ -137,7 +137,6 @@
         <h1 id="logo"><img src="//cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png" /></h1>
         <img class="avatar" src="<%= @user[:info][:image] %>"/>
         <h2>Welcome <%= @user[:info][:name] %></h2>
-        <pre><%= JSON.pretty_generate(@user[:info]) %></pre>
         <pre><%= JSON.pretty_generate(@user) %></pre>
       </div>
     </div>
