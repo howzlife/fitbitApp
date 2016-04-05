@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require d3
+//= require cal-heatmap
 //= require foundation
 //= require_tree .
 

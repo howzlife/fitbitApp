@@ -97,11 +97,11 @@
 	height: 100%;
 }
 
-div#cal-heatmap {
+/*div#cal-heatmap {
 	position: relative;
   	top: 50%;
   	transform: translateY(50%);
-}
+}*/
 
 div.fitfam-item {
 	width: 150px;
