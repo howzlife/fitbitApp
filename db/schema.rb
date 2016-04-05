@@ -11,10 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405174837) do
+ActiveRecord::Schema.define(version: 20160405202159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "burned_calories", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "day"
+    t.integer  "calories"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "calories_burned", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "day"
+    t.integer  "calories"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "consumed_calories", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "day"
+    t.integer  "calories"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

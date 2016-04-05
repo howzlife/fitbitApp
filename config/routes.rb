@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get "/auth/auth0/callback" => "auth0#callback"
   get "/auth/failure" => "auth0#failure"
 
-  get 'dashboard/data/:uid', to: 'dashboard#data', :defaults => { :format => 'json' }
+  get 'dashboard/burnedCaloriedata/:uid', to: 'dashboard#burnedCaloriedata', :defaults => { :format => 'json' }
+  get 'dashboard/consumedCaloriedata/:uid', to: 'dashboard#consumedCaloriedata', :defaults => { :format => 'json' }
 
   Rails.application.routes.draw do
     root to: 'home#show'
