@@ -1,15 +1,28 @@
 <% content_for :cdn_code do %>
   <%= javascript_include_tag '//cdn.auth0.com/js/lock-7.11.min.js' %>
-  <%= stylesheet_link_tag  'dashboard' %>
+  <%= stylesheet_link_tag  'profile' %>
 <% end %>
 <%= render "layouts/header" %>
+<%= content_tag :div, class: "temp_information", data: {follower: @user.id, followee: @user_profile.id, name: @user_profile.name} do %>
+<% end %>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "profile.js" %>
+<% end %>
 <div class="feed">
   </br></br>
   <div class="container container-logged-in">
     <div class="banner">
-      <div class="row small-up-2 large-up-4">
-          <div class="column" id="chartContainer1"></div>
-      </div>
+        <div class="row small-up-2 large-up-4">
+          <div id="cal-heatmap">
+            <h3 style="color: #FFF; float: left;">Calories Out</h3>
+            <div class="chart" id="heatmap-chart-1">
+            </div>
+          </br>
+            <h3 style="color: #FFF; float: left;">Calories In</h3>
+            <div class="chart" id="heatmap-chart-2">
+            </div>
+          </div>
+        </div>
     </div>
   </div>
   <div class="feed-banner">
@@ -19,11 +32,11 @@
         <p><%= image_tag "https://s3.amazonaws.com/uifaces/faces/twitter/sdw/128.jpg" %></p>
         </div>
         <div class="user-info">
-          <h3 style="color: #FFF;">Nick Dubus</h3>
-          <h4 style="color: #FFF;">29 years old</h4>
-          <h4 style="color: #FFF;">6'1     195lbs</h4>
+          <h3 style="color: #FFF;"><%= @user_profile.name %></h3>
+          <h4 style="color: #FFF;"><%= @user_profile.age %> years old</h4>
+          <h4 style="color: #FFF;"><%= @user_profile.height %>cm, <%= @user_profile.weight %>kg </h4>
         </div>
-          <button>Add Nick to my FitFam!</button>
+          <button id="addToFitFam">Add <%= @user_profile.name %> to your FitFam!</button>
       </div>
     </div>
         <div class="feed-container">
@@ -60,7 +73,7 @@
                   <%= image_tag 'running.png', class: "avatar-small"%>
                 <div class="activity-info">
                   <p>
-                    Nick went Joggig for 1 hour last Friday
+                    Nick went Jogging for 1 hour last Friday
                   </p>
                 </div> 
               </div>
@@ -77,4 +90,4 @@
         </div>
   </div>
 </div>
-
+<script> loadProfilejs(); </script>

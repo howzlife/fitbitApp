@@ -2,6 +2,9 @@
   <%= javascript_include_tag '//cdn.auth0.com/js/lock-7.11.min.js' %>
   <%= stylesheet_link_tag  'dashboard' %>
 <% end %>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "dashboard.js" %>
+<% end %>
 <%= render "layouts/header" %>
 <div class="feed">
     </br></br>
@@ -102,3 +105,5 @@
       </div>
     </div>
 </div>
+<script> loadDashboardjs(); </script>
+

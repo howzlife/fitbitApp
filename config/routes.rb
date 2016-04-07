@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   get 'dashboard/show'
 
-  get 'profile' => 'profile#index'
+  get 'profile/:uid' => 'profile#index'
+
+  post 'profile/add_to_fitfam', to: 'profile#add_to_fitfam', :defaults => { :format => 'json' }
 
   get "/" => "home#show"
 
