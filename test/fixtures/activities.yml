@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  time: 1
+  time_unit: MyString
+  date: MyString
+  calories: 1
+  with_user: MyString
+
+two:
+  type: 
+  time: 1
+  time_unit: MyString
+  date: MyString
+  calories: 1
+  with_user: MyString
