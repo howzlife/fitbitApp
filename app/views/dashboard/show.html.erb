@@ -24,86 +24,113 @@
       </div>
     </div>
       <div class="feed-banner">
-        <div class="fitfam-container">
-          <div class="medium-4 columns">
-            <h3 style="color:#FFF;">FitFam</h3>
-            <div class="fitfam">
+        <div class="medium-4 columns">
+          <div style="max-height: 10%;">
+          <h3 style="color:#FFF;">FitFam</h3>
+        </div>
+          <div class="fitfam">
+            <% @follow_array.each do |friend| %> 
               <div class="fitfam-friend">
-                <div class="avatar-small">
-                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/sauro/48.jpg'%>
-                </div>
+                  <%= image_tag friend.avatar, class: "avatar-small" %>
                 <div class="fitfam-info">
-                  <div class="fitfam-item"><h5>Connor McDavid</h5></div>
-                  <div class="fitfam-item"><p>Friends since 2015</p></div>
+                  <div class="fitfam-item"><h5><%= link_to friend.name, "/profile/#{friend.auth0_id}" %></h5>
+                  </div>
+                  <div class="fitfam-item">
+                    <p>Friends since 2015</p>
+                  </div>
                 </div>
               </div>
-              <div class="fitfam-friend">
-                <div class="avatar-small">
-                  <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/k/48.jpg' %>
-                </div>
-                <div class="fitfam-info">
-                  <div class="fitfam-item"><h5>Eric Alvarez</h5></div>
-                  <div class="fitfam-item"><p>Friends since 2015</p></div>
-                </div>
+            <% end %>
+            <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/k/48.jpg' %>
               </div>
-              <div class="fitfam-friend">
-                <div class="avatar-small">
-                  <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/48.jpg'%>
-                </div>
-                <div class="fitfam-info">
-                  <div class="fitfam-item"><h5>John Doe</h5></div>
-                  <div class="fitfam-item"><p>Friends since 2015</p></div>
-                </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>Eric Alvarez</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
               </div>
-              <div class="fitfam-friend">
-                <div class="avatar-small">
-                  <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg'%>
-                </div>
-                <div class="fitfam-info">
-                  <div class="fitfam-item"><h5>Jane Doe</h5></div>
-                  <div class="fitfam-item"><p>Friends since 2015</p></div>
-                </div>
-              </div>
-              <div class="fitfam-friend">
-                <div class="avatar-small">
-                  <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/sdw/48.jpg'%>
-                </div>
-                <div class="fitfam-info">
-                  <div class="fitfam-item"><h5>Clayton Bigsby</h5></div>
-                  <div class="fitfam-item"><p>Friends since 2015</p></div>
-                </div>
-              </div>
-              <p>And 17 more </p>
             </div>
+            <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/48.jpg'%>
+              </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>John Doe</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
+              </div>
+            </div>
+            <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg'%>
+              </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>Jane Doe</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
+              </div>
+            </div>
+                        <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg'%>
+              </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>Jane Doe</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
+              </div>
+            </div>
+                        <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg'%>
+              </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>Jane Doe</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
+              </div>
+            </div>
+                        <div class="fitfam-friend">
+              <div class="avatar-small">
+                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/48.jpg'%>
+              </div>
+              <div class="fitfam-info">
+                <div class="fitfam-item"><h5>Jane Doe</h5></div>
+                <div class="fitfam-item"><p>Friends since 2015</p></div>
+              </div>
+            </div>
+            <p>And <%= @user_model.follow_count %> more </p>
           </div>
         </div>
         <div class="feed-container">
           <div class="medium-8 columns">
             <h3 style="color:#FFF;">FitFeed</h3>
             <div class="fitfeed">
+              <%= form_for :post do |f| %>
+                Comment: <%= f.text_area :content  %> 
+                Activity: <%= f.select :activity, Activity.all.map {|activity| [activity.name, activity.id] }, :prompt => "Select One" %> 
+                With:    <%= f.select :with_user, @follow_array.each.map {|item| [item.name, item.id] }, 
+                :prompt => "Select One"
+                %>
+                <%= f.hidden_field :for_user, value: @user_model.id %> 
+              <%= f.submit "Post!", class: "wall-submit-button" %> 
+              <% end %>
+              <% @user_model.posts.last(5).each do |post| %>
               <div class="fitfeed-friend">
-                <%= image_tag 'https://s3.amazonaws.com/uifaces/faces/twitter/k/48.jpg', class: "avatar-small"%>
+                <%= image_tag User.find(post.with_user).avatar, class: "avatar-small" %>
+                <%= image_tag Activity.find(post.activity).avatar, class: "avatar-small" %>
+                <h5 style="float: left; margin-left: 5px;max-width: 50%;"><%= Activity.find(post.activity).name %> with <%= User.find(post.with_user).name %></h5>
+                <p style="min-width: 30%;float: right;">Comments: <%= post.content %> </p>
               </div>
-              <div class="fitfeed-friend">
-              </div>
-              <div class="fitfeed-friend">
-              </div>
-              <div class="fitfeed-friend">
-              </div>
-              <div class="fitfeed-friend">
-              </div>
+              <%end%>
             </div>
           </div>
         </div>
       </div>
-    <div class="login-page clearfix">
+<!--     <div class="login-page clearfix">
       <div class="logged-in-box auth0-box logged-in">
         <h1 id="logo"><img src="//cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png" /></h1>
         <img class="avatar" src="<%= @user[:info][:image] %>"/>
         <h2>Welcome <%= @user[:info][:name] %></h2>
         <pre><%= JSON.pretty_generate(@user) %></pre>
       </div>
-    </div>
+    </div> -->
 </div>
 <script> loadDashboardjs(); </script>
 

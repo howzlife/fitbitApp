@@ -187,7 +187,6 @@ PLATFORMS
 DEPENDENCIES
   acts_as_follower
   cal-heatmap-rails
-  coffee-rails (~> 4.0.0)
   d3_rails
   devise
   devise-auth0

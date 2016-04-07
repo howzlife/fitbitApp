@@ -1,7 +1,7 @@
 class ProfileController < ApplicationController
 	def index 
-		@user = User.find_by auth0_id: session[:userinfo][:uid]
-		@user_profile = User.find(6)
+		@user = User.find_by! auth0_id: session[:userinfo][:uid]
+		@user_profile = User.find_by! auth0_id: params[:uid]
 	end
 
 	def add_to_fitfam

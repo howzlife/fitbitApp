@@ -5,6 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Activity.create([
+	{name: "baseball", avatar: "baseball.png"}, 
+	{name: "boxing", avatar: "boxing.png"}, 
+	{name: "dancing", avatar: "dancing.png"}, 
+	{name: "hockey", avatar: "hockey.png"}, 
+	{name: "karate", avatar: "karate.png"}, 
+	{name: "rock-climbing", avatar: "rock-climbing.png"}, 
+	{name: "running", avatar: "running.png"}, 
+	{name: "soccer", avatar: "soccer1.png"}, 
+	{name: "swimming", avatar: "swimming.png"}, 
+	{name: "tennis", avatar: "tennis.png"}, 
+	{name: "volleyball", avatar: "volleyball.png"}, 
+	{name: "weightlifting", avatar: "weightlifting.png"}, 
+	{name: "beach-volleyball", avatar: "beach-volleyball.png"}
+	])
+
+
 BurnedCalorie.create([
 	{ uid: "fitbit|4DNVLF", day: "1430481600",  calories: "10"},
 	{ uid: "fitbit|4DNVLF", day: "1430568000",  calories: "2532"},

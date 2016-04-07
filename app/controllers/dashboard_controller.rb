@@ -5,7 +5,9 @@ class DashboardController < SecuredController
 
   def show
     @user = session[:userinfo]
+    @user_model = User.find_by! auth0_id: @user[:uid]
     @session = session
+    @follow_array = @user_model.all_following
   end
   
   def burnedCaloriedata
@@ -26,6 +28,13 @@ class DashboardController < SecuredController
         render :json => hashData
     }
     end
+  end
+
+  def post_to_wall
+    @user = User.find(params[:post][:for_user])
+    @user.posts.create(:content => params[:post][:content], 
+      :activity => params[:post][:activity].to_i, :with_user => params[:post][:with_user])
+    redirect_to action: :show
   end
 
   private 

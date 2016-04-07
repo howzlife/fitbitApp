@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get "/dashboard" => "dashboard#show"
 
+  post "/dashboard/show" => "dashboard#post_to_wall"
+
   get "/auth/auth0/callback" => "auth0#callback"
   get "/auth/failure" => "auth0#failure"
 
